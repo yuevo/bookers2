@@ -1,0 +1,31 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.field {
+  margin-bottom: 10px;
+}
+
+.actions {
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#notice {
+  color: green;
+}
+#error_explanation {
+  color: red;
+}

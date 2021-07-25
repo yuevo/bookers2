@@ -14,15 +14,15 @@
       <% end %>
       <%= form_with model: @user, local:true do |f| %>
         <div class="form-group">
-          <label for="user_name">Name</label>
+          <%= f.label :name %>
           <%= f.text_field :name, class: "form-control name", id: "user_name" %>
         </div>
         <div class="form-group">
-          <label for="user_image">Image</label><br>
+          <%= f.label :profile_image %>
           <%= f.attachment_field :profile_image, class: "form-control-file user_image", placeholder: "プロフィール画像" %>
         </div>
         <div class="form-group">
-          <label for="user_introduction">Introduction</label>
+          <%= f.label :introduction %>
           <%= f.text_area :introduction, class: "form-control introduction", id: "user_introduction" %>
         </div>
         <div class="form-group">

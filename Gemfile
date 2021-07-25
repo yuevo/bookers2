@@ -49,7 +49,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'seed-fu'
-  gem 'pry-rails'
 end
 
 group :test do
@@ -72,3 +71,4 @@ gem 'kaminari','~> 1.2.1'
 gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
+gem 'pry-rails'

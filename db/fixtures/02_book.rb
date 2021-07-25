@@ -4,7 +4,7 @@
   Book.seed do |s|
     s.id = num
     s.title = "本のタイトル その#{num}"
-    s.opinion = "本の感想 その#{num}"
+    s.body = "本の感想 その#{num}"
     s.user_id = 1
   end
 end
@@ -15,7 +15,7 @@ end
   Book.seed do |s|
     s.id = num
     s.title = "本のタイトル その#{num}"
-    s.opinion = "本の感想 その#{num}"
+    s.body = "本の感想 その#{num}"
     s.user_id = 2
   end
 end
@@ -26,7 +26,7 @@ end
   Book.seed do |s|
     s.id = num
     s.title = "本のタイトル その#{num}"
-    s.opinion = "本の感想 その#{num}"
+    s.body = "本の感想 その#{num}"
     s.user_id = 3
   end
 end

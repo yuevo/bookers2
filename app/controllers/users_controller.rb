@@ -4,11 +4,13 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @book = Book.new
   end
 
   def show
     @book = Book.new
     @books = Book.where(user_id: params[:id]).includes(:user)
+    @user = User.find(params[:id])
   end
 
   def edit
@@ -31,6 +33,6 @@ class UsersController < ApplicationController
   end
 
   def user_check
-    redirect_to user_path(current_user) unless params[:id] == current_user.id
+    redirect_to user_path(current_user) unless params[:id].to_i == current_user.id
   end
 end

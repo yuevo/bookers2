@@ -50,6 +50,6 @@ class BooksController < ApplicationController
   end
 
   def user_check
-    redirect_to user_path(current_user) unless @book.user_id == current_user.id
+    redirect_to books_path unless @book.user_id == current_user.id
   end
 end

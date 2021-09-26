@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_book, only: [:edit, :update, :show]
+  before_action :set_user, only: [:edit, :update, :show]
   before_action :user_check, only: [:edit, :update, :destroy]
 
   def index
@@ -30,8 +30,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :introduction, :profile_image)
   end
 
-  def set_book
-    @user = User.find(params[:id])
+  def set_user
+    @user = current_user
   end
 
   def user_check

@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def show
     @book = Book.new
     @books = Book.where(user_id: params[:id]).includes(:user)
+    @favorite_books = @user.favorite_books
   end
 
   def edit

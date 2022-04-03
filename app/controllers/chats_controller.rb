@@ -20,7 +20,13 @@ class ChatsController < ApplicationController
   
   def create
     @chat = current_user.chats.new(chat_params)
-    @chat.save
+    unless @chat.save
+      room = Room.find(params[:chat][:room_id])
+      @chats = room.chats
+      user_id = room.user_rooms.where.not(user_id: current_user.id).first.user_id
+      @user = User.find(user_id)
+      render :show
+    end
   end
 
   private

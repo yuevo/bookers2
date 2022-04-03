@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'chats/show'
   get 'favorites/create'
   get 'favorites/destroy'
   devise_for :users
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
   resources :books do 
     resource :favorites, only: [:create, :destroy]
   end
+  resources :chats, only: [:show, :create]
 end

@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   before_action :user_check, only: [:edit, :update, :destroy]
 
   def index
-    @books = Book.includes(:user)
+    @books = Book.sort_favorites
     @book = Book.new
   end
 

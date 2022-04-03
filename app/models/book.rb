@@ -12,7 +12,7 @@ class Book < ApplicationRecord
     favorites.where(user_id: user.id).exists?
   end
 
-  def sort_favorites
+  def self.sort_favorites
     today = Time.current.at_end_of_day
     day_last_week = (today - 6.day).at_beginning_of_day
     self.includes(:favorited_users).
